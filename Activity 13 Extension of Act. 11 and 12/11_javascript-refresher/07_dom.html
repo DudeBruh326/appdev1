@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>JS Refresher DOM</title></head>
+<body>
+  <button id="colorBtn">Change Background</button>
+  <p id="message"></p>
+  <p id="delayed"></p>
+  <script>
+    document.getElementById("colorBtn").addEventListener("click", function() {
+      document.body.style.backgroundColor = "lightblue";
+    });
+    let favColor = prompt("What is your favorite color?");
+    document.getElementById("message").innerText = `Your favorite color is ${favColor}`;
+    setTimeout(() => {
+      document.getElementById("delayed").innerText = "This message appears after 2 seconds";
+    }, 2000);
+  </script>
+</body>
+</html>
