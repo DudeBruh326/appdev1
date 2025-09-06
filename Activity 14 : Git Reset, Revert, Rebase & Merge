@@ -1,0 +1,104 @@
+mkdir 14_git_reset_demo
+cd 14_git_reset_demo
+echo "Line 1" > file.txt
+git add .
+git commit -m "Add Line 1"
+
+echo "Line 2" >> file.txt
+git commit -am "Add Line 2"
+
+echo "Line 3" >> file.txt
+git commit -am "Add Line 3"
+
+git log --oneline   # Copy one of the earlier commit IDs
+git reset --hard <commit-id>
+git log --oneline
+cat file.txt
+cd ..
+mkdir 14_git_revert_demo
+cd 14_git_revert_demo
+
+echo "Line 1" > file.txt
+git add .
+git commit -m "Add Line 1"
+
+echo "Line 2" >> file.txt
+git commit -am "Add Line 2"
+
+echo "Line 3" >> file.txt
+git commit -am "Add Line 3"
+
+git revert HEAD
+git log --oneline
+cat file.txt
+cd ..
+mkdir 14_macro_vs_micro_commits_demo
+cd 14_macro_vs_micro_commits_demo
+
+echo "Feature A" > feature.txt
+echo "Bug fix" > bugfix.txt
+echo "Doc update" > readme.md
+git add .
+git commit -m "Add feature A, fix bug, update docs"
+
+git reset --hard HEAD~1
+
+echo "Feature A" > feature.txt
+git add feature.txt
+git commit -m "Add feature A"
+
+echo "Bug fix" > bugfix.txt
+git add bugfix.txt
+git commit -m "Fix bug in validation"
+
+echo "Doc update" > readme.md
+git add readme.md
+git commit -m "Update docs"
+
+git log --oneline
+cd ..
+mkdir 14_git_rebase_demo
+cd 14_git_rebase_demo
+
+git checkout main
+echo "Base work" > base.txt
+git add .
+git commit -m "Base commit"
+
+git checkout -b feature
+echo "Feature work" > feature.txt
+git add .
+git commit -m "Add feature"
+
+echo "More feature work" >> feature.txt
+git commit -am "Extend feature"
+
+git checkout main
+echo "Hotfix" > hotfix.txt
+git add .
+git commit -m "Hotfix applied"
+
+git checkout feature
+git rebase main
+git log --oneline --graph --all
+cd ..
+mkdir 14_git_merge_demo
+cd 14_git_merge_demo
+
+git checkout main
+echo "Base work" > base.txt
+git add .
+git commit -m "Base commit"
+
+git checkout -b feature
+echo "Feature work" > feature.txt
+git add .
+git commit -m "Add feature"
+
+git checkout main
+echo "Hotfix" > hotfix.txt
+git add .
+git commit -m "Hotfix applied"
+
+git merge feature
+git log --oneline --graph --all
