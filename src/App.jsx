@@ -1,18 +1,28 @@
 import './App.css'
 
 
-function App() {
 
-
+function AboutPage() {
   return (
-
-    function MyButton() {
-    return (
-      <button>I'm a button</button>
-    );
-  }
-
+    <>
+      <h1>About</h1>
+      <p>Hello there.<br />How do you do?</p>
+    </>
   );
 }
 
-export default App
+
+
+
+
+function App() {
+ 
+
+  return (
+    <>
+      <AboutPage />
+    </>
+  )
+}
+
+export default App;
