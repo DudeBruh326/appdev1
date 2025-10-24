@@ -1,4 +1,3 @@
-Profile.js
 export default function Profile() {
   return (
     <img
