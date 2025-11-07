@@ -1,8 +1,8 @@
 function Profile() {
   return (
     <img
-      src="https://i.imgur.com/MK3eW3As.jpg"
-      alt="Katherine Johnson"
+      src="https://i.imgur.com/QIrZWGIs.jpg"
+      alt="Alan L. Hart"
     />
   );
 }
@@ -17,14 +17,3 @@ export default function Gallery() {
     </section>
   );
 }
-
-
-import Gallery from './Gallery.jsx';
-
-export default function App() {
-  return (
-    <Gallery />
-  );
-}
-
-
