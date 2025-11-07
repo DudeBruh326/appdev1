@@ -18,7 +18,7 @@ export default function Gallery() {
   );
 }
 
-import Gallery from './Gallery.js';
+import Gallery from './Gallery.jsx';
 
 export default function App() {
   return (
