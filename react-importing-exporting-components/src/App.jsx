@@ -1,12 +1,3 @@
-export default function Profile() {
-  return (
-  <div>
-    <img src="https://i.imgur.com/MK3eW3As.jpg" alt="Katherine Johnson" />
-  </div>
-  )
-}
-
-
 function Profile() {
   return (
     <img
@@ -26,5 +17,4 @@ export default function Gallery() {
     </section>
   );
 }
-
 
