@@ -1,0 +1,2 @@
+Line 1
+it resets from line 3 to line 1
