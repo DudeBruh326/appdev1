@@ -1,0 +1,2 @@
+in the macro one, it is whole while in the micro it is separated into bits
+Macro it commit as a whole while micro commit separate in bits

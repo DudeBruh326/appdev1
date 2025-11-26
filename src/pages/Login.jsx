@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> d1394555a18fd4805ce357ccc815f5bfe3c5469e
 import { useEffect, useState } from "react";
 
 function Login () {
@@ -45,3 +48,9 @@ return (
 }
 
 export default Login
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> d1394555a18fd4805ce357ccc815f5bfe3c5469e
